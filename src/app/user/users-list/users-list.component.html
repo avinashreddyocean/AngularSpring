@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+  <div class="col">
+  <section>
+  <header class="header">
+  <div class="row">
+  <div class="col-md-2">
+  <form name="empForm"> 
+  <table>
+   <tr>
+  <th colspan="2">Add User</th>
+  </tr>
+  <tr>
+  <td>FirstName:</td>
+  <td><input id="firstName" name="firstName" ></td>
+  </tr>
+  <tr>
+    <td>LastName:</td>
+    <td><input id="lastName" name="lastName" ></td>
+    </tr>
+  <tr>
+  <td>Email:</td>
+  <td><input id="emailAddress" name="email"></td>
+  </tr>
+  <tr>
+    <td>Phone No:</td>
+    <td><input id="phonenumber" name="phoneNo"></td>
+    </tr>
+    <tr>
+      <td>role:</td>
+      <td><input id="role" name="role"></td>
+      </tr>
+  <tr>
+  <td colspan="2"> <button type="button" (click)="createUser()" class="blue-button">submit</button></td>
+  </tr>
+  </table>
+  </form>
+  </div>
+  </div>
+ </header>
+  </section>
+ <section class="main">
+ <table class="table">
+  <thead>
+  <tr>
+  <th>#</th>
+  <th>First Name</th>
+  <th>lastName</th>
+  <th>Phone No</th>
+  <th>Email</th>
+  <th>role</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+  <th scope="row">{{user.id}}</th>
+  <td>{{user.firstName}}</td>
+  <td>{{user.lastName}}</td>
+  <td>{{user.phonenumber}}</td>
+  <td>{{user.emailAddress}}</td>
+  <td>{{user.role}}</td>
+  <td>
+  <button type="button" class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+  </td>
+  </tr>
+ </tbody>
+  </table>
+  </section>
+  </div>
+  </div>
+ </div>
+ 
